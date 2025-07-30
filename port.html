@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>My Portfolio</title>
+    <style>
+        /* CSS styles here */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            background-color: #f5f5f5;
+            color: #333;
+            padding: 20px;
+            max-width: 900px;
+            margin: auto;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+
+        nav ul {
+            list-style-type: none;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #0077cc;
+            font-weight: 600;
+        }
+
+        nav a:hover,
+        nav a:focus {
+            text-decoration: underline;
+            outline: none;
+        }
+
+        section {
+            margin-bottom: 50px;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 8px rgba(0,0,0,0.1);
+        }
+
+        h2 {
+            margin-bottom: 15px;
+            color: #222;
+        }
+
+        .project-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .project {
+            flex: 1 1 45%;
+            background-color: #e7f0fe;
+            padding: 15px;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .project:hover,
+        .project:focus {
+            background-color: #d0e4fe;
+            outline: none;
+        }
+
+        form label {
+            font-weight: 600;
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 15px;
+            border-radius: 4px;
+            border: 1px solid #ccc;
+            font-size: 1rem;
+        }
+
+        button {
+            background-color: #0077cc;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            font-size: 1rem;
+            cursor: pointer;
+            border-radius: 4px;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover,
+        button:focus {
+            background-color: #005fa3;
+            outline: none;
+        }
+
+        #formMessage {
+            margin-top: 10px;
+            font-weight: 600;
+            color: green;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Samardeep Singh</h1>
+        <nav>
+            <ul>
+                <li><a href="#about">About Me</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="about">
+        <h2>About Me</h2>
+        <p>Hi! I'm Samardeep, a frontend developer and passionate coder.</p>
+    </section>
+
+    <section id="projects">
+        <h2>Projects</h2>
+        <div class="project-list">
+            <div class="project" tabindex="0">
+                <h3>Project One</h3>
+                <p>This is a sample project description.</p>
+            </div>
+            <div class="project" tabindex="0">
+                <h3>Project Two</h3>
+                <p>This is another project description.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>Contact Me</h2>
+        <form id="contactForm">
+            <label for="name">Name:</label><br />
+            <input type="text" id="name" name="name" required /><br />
+            <label for="email">Email:</label><br />
+            <input type="email" id="email" name="email" required /><br />
+            <label for="message">Message:</label><br />
+            <textarea id="message" name="message" rows="5" required></textarea><br />
+            <button type="submit">Send</button>
+        </form>
+        <p id="formMessage"></p>
+    </section>
+
+    <script>
+        // JavaScript code here
+        document.getElementById('contactForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent page reload
+
+            const name = document.getElementById('name').value.trim();
+            const email = document.getElementById('email').value.trim();
+            const message = document.getElementById('message').value.trim();
+
+            if (!name || !email || !message) {
+                alert('Please fill in all fields.');
+                return;
+            }
+
+            const formMessage = document.getElementById('formMessage');
+            formMessage.textContent = `Thank you, ${name}! Your message has been received.`;
+            formMessage.style.color = 'green';
+
+            this.reset();
+        });
+    </script>
+</body>
+</html>

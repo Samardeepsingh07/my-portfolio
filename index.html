@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Samardeep Singh | Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <!-- Remix Icons CDN for icons -->
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@3.4.0/fonts/remixicon.css" rel="stylesheet" />
+</head>
+<body>
+  <header class="header" id="header">
+    <nav class="nav container">
+      <a href="#" class="nav__logo">Samardeep Singh</a>
+
+      <div class="nav__menu" id="nav-menu">
+        <ul class="nav__list">
+          <li class="nav__item"><a href="#home" class="nav__link active-link">Home</a></li>
+          <li class="nav__item"><a href="#about" class="nav__link">About</a></li>
+          <li class="nav__item"><a href="#skills" class="nav__link">Skills</a></li>
+          <li class="nav__item"><a href="#projects" class="nav__link">Projects</a></li>
+          <li class="nav__item"><a href="#contact" class="nav__link">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="nav__toggle" id="nav-toggle">
+        <i class="ri-menu-line"></i>
+      </div>
+    </nav>
+  </header>
+
+  <main class="main">
+    <section class="home section" id="home">
+      <div class="home__container container grid">
+        <div class="home__content">
+          <h1 class="home__title">Hi, I'm Samardeep Singh</h1>
+          <h3 class="home__subtitle">B.Tech CSE (2027) | Web Development | Ethical Hacking | AI Enthusiast</h3>
+          <p class="home__description">
+            Passionate about building real-world projects using React.js, Node.js, and full-stack development. Working towards launching my own tech products.
+          </p>
+          <a href="#contact" class="button">Hire Me</a>
+        </div>
+
+          <!-- Add your profile image here -->
+          <img src="sam-prof.jpg" alt="Samardeep profile" /> 
+      
+      </div>
+    </section>
+
+    <section class="about section" id="about">
+      <h2 class="section__title">About Me</h2>
+      <span class="section__subtitle">My Introduction</span>
+      <div class="about__container container grid">
+        <div class="about__data">
+          <p>
+            I’m a passionate and driven Computer Science Engineering student (B.Tech CSE, 2027) with a strong interest in web development, ethical hacking, and AI integration.
+            I’m currently building real-world projects, honing my skills in React.js, Node.js, and full-stack development, and working towards launching my own tech products.
+          </p>
+          <p>
+            Outside the tech world, I’m a dedicated fitness enthusiast—committed to discipline, performance, and self-growth both physically and mentally. I also enjoy content creation, blending creativity with personal branding to engage and inspire others.
+          </p>
+          <!-- Add image if you want -->
+          <!-- <img src="C:\Users\saama\OneDrive\Desktop\WhatsApp Image 2025-07-15 at 15.32.57_7e9bf930.jpg" alt="About Me" />-->
+        </div>
+      </div>
+    </section>
+
+    <section class="skills section" id="skills">
+      <h2 class="section__title">Skills</h2>
+      <span class="section__subtitle">My technical level</span>
+      <div class="skills__container container grid">
+        <div class="skills__content">
+          <h3 class="skills__title">Frontend Development</h3>
+          <ul class="skills__list">
+            <li class="skills__item">HTML5</li>
+            <li class="skills__item">CSS3</li>
+            <li class="skills__item">JavaScript</li>
+            <li class="skills__item">React (Beginner)</li>
+            <li class="skills__item">Tailwind CSS</li>
+            <li class="skills__item">Bootstrap</li>
+          </ul>
+        </div>
+        <div class="skills__content">
+          <h3 class="skills__title">Programming Languages</h3>
+          <ul class="skills__list">
+            <li class="skills__item">Java</li>
+            <li class="skills__item">Python</li>
+            <li class="skills__item">C & C++ (with DSA)</li>
+          </ul>
+        </div>
+        <div class="skills__content">
+          <h3 class="skills__title">Other Skills</h3>
+          <ul class="skills__list">
+            <li class="skills__item">UI/UX Design</li>
+            <li class="skills__item">Makeup for Music Videos & Events</li>
+            <li class="skills__item">Community Volunteering</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="projects section" id="projects">
+      <h2 class="section__title">Projects</h2>
+      <span class="section__subtitle">My recent work</span>
+      <div class="projects__container container grid">
+        <div class="project__card">
+          <!-- Add project image here if you want -->
+     <!--<img src="C:\Users\saama\OneDrive\Desktop\sam.jpg" alt="Swasth Daan" /> -->
+          <h3 class="project__title">Swasth Daan</h3>
+          <p class="project__description">
+            A health donation app and website to support organ and blood donation initiatives. Includes AI chatbot and smooth animations.
+          </p>
+        </div>
+        <div class="project__card">
+          <h3 class="project__title">Remote Patient Controlling</h3>
+          <p class="project__description">
+            Developed a system using PPG sensors and data visualization to monitor patient vitals remotely. Presented at MRIIRS Poster Presentation.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact section" id="contact">
+      <h2 class="section__title">Contact Me</h2>
+      <span class="section__subtitle">Get in touch</span>
+      <div class="contact__container container">
+        <form id="contact-form" class="contact__form">
+          <input type="text" name="name" placeholder="Your Name" required class="contact__input" />
+          <input type="email" name="email" placeholder="Your Email" required class="contact__input" />
+          <textarea name="message" placeholder="Your Message" required class="contact__input" rows="5"></textarea>
+          <button type="submit" class="button">Send Message</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>© 2025 Samardeep Singh. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
